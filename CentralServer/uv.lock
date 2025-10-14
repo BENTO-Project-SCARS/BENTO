@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.13"
 
 [[package]]
@@ -59,11 +59,11 @@ wheels = [
 
 [[package]]
 name = "astroid"
-version = "3.3.9"
+version = "4.0.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/39/33/536530122a22a7504b159bccaf30a1f76aa19d23028bd8b5009eb9b2efea/astroid-3.3.9.tar.gz", hash = "sha256:622cc8e3048684aa42c820d9d218978021c3c3d174fb03a9f0d615921744f550", size = 398731, upload-time = "2025-03-09T11:54:36.388Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a7/d1/6eee8726a863f28ff50d26c5eacb1a590f96ccbb273ce0a8c047ffb10f5a/astroid-4.0.1.tar.gz", hash = "sha256:0d778ec0def05b935e198412e62f9bcca8b3b5c39fdbe50b0ba074005e477aab", size = 405414, upload-time = "2025-10-11T15:15:42.6Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/de/80/c749efbd8eef5ea77c7d6f1956e8fbfb51963b7f93ef79647afd4d9886e3/astroid-3.3.9-py3-none-any.whl", hash = "sha256:d05bfd0acba96a7bd43e222828b7d9bc1e138aaeb0649707908d3702a9831248", size = 275339, upload-time = "2025-03-09T11:54:34.489Z" },
+    { url = "https://files.pythonhosted.org/packages/47/f4/034361a9cbd9284ef40c8ad107955ede4efae29cbc17a059f63f6569c06a/astroid-4.0.1-py3-none-any.whl", hash = "sha256:37ab2f107d14dc173412327febf6c78d39590fdafcb44868f03b6c03452e3db0", size = 276268, upload-time = "2025-10-11T15:15:40.585Z" },
 ]
 
 [[package]]
@@ -1002,7 +1002,7 @@ wheels = [
 
 [[package]]
 name = "pylint"
-version = "3.3.6"
+version = "4.0.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "astroid" },
@@ -1013,9 +1013,9 @@ dependencies = [
     { name = "platformdirs" },
     { name = "tomlkit" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/69/a7/113d02340afb9dcbb0c8b25454e9538cd08f0ebf3e510df4ed916caa1a89/pylint-3.3.6.tar.gz", hash = "sha256:b634a041aac33706d56a0d217e6587228c66427e20ec21a019bc4cdee48c040a", size = 1519586, upload-time = "2025-03-20T11:25:38.207Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b6/2f/e80cc4301c81c41a8836d726377daeebf5901a33c06ba8c2d5afb94f7612/pylint-4.0.0.tar.gz", hash = "sha256:62da212808c0681e49ffb125f0a994c685d912cf19ae373075649ebb5870ec28", size = 1567676, upload-time = "2025-10-12T15:21:15.165Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/31/21/9537fc94aee9ec7316a230a49895266cf02d78aa29b0a2efbc39566e0935/pylint-3.3.6-py3-none-any.whl", hash = "sha256:8b7c2d3e86ae3f94fb27703d521dd0b9b6b378775991f504d7c3a6275aa0a6a6", size = 522462, upload-time = "2025-03-20T11:25:36.13Z" },
+    { url = "https://files.pythonhosted.org/packages/42/af/068a0b92c49927ada0e177561244157dc9d122eeea5987e34c423172a296/pylint-4.0.0-py3-none-any.whl", hash = "sha256:196b92a85204bb0c0a416a6bb324f6185e59ff1d687ee1d614bf0abf34a348e8", size = 535836, upload-time = "2025-10-12T15:21:13.041Z" },
 ]
 
 [[package]]
