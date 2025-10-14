@@ -144,7 +144,7 @@ class MonthlyReport(SQLModel, table=True):
     revolving_fund_report: LiquidationReportRevolvingFund | None = Relationship(
         back_populates="parent_report", cascade_delete=True
     )
-    disbursement_voucher_report: DisbursementVoucher | None = Relationship(
+    disbursement_voucher_report: list[DisbursementVoucher] = Relationship(
         back_populates="parent_report", cascade_delete=True
     )
     payroll_report: PayrollReport | None = Relationship(

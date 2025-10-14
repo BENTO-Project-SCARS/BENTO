@@ -22,6 +22,7 @@
 "use client";
 
 import { CreatableUnitSelect } from "@/components/CreatableUnitSelect";
+import { DisbursementVoucherLinker } from "@/components/DisbursementVoucherLinker";
 import { LoadingComponent } from "@/components/LoadingComponent/LoadingComponent";
 import { SplitButton } from "@/components/SplitButton/SplitButton";
 import { ReportAttachmentManager } from "@/components/Reports/ReportAttachmentManager";
@@ -1606,6 +1607,14 @@ function LiquidationReportContent() {
                         disabled={isSaving || isReadOnly()}
                         title="Supporting Documents"
                         description="Upload receipts, invoices, and other supporting documents for this liquidation report"
+                    />
+
+                    {/* Disbursement Voucher Linker */}
+                    <DisbursementVoucherLinker
+                        reportPeriod={reportPeriod}
+                        category={category || ""}
+                        schoolId={effectiveSchoolId || 0}
+                        disabled={isSaving || isReadOnly()}
                     />
 
                     {/* Signature Cards */}

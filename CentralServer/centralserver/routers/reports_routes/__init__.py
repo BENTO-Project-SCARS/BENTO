@@ -9,6 +9,9 @@ from centralserver.routers.reports_routes.attachments import (
     router as attachments_router,
 )
 from centralserver.routers.reports_routes.daily import router as daily_router
+from centralserver.routers.reports_routes.disbursement_voucher import (
+    router as disbursement_voucher_router,
+)
 from centralserver.routers.reports_routes.liquidation import (
     router as liquidation_router,
 )
@@ -27,4 +30,7 @@ router.include_router(monthly_router, tags=["Monthly Reports"])
 router.include_router(daily_router, tags=["Daily Reports"])
 router.include_router(payroll_router, tags=["Payroll Reports"])
 router.include_router(liquidation_router, tags=["Liquidation Reports"])
+router.include_router(
+    disbursement_voucher_router, tags=["Disbursement Voucher Reports"]
+)
 router.include_router(attachments_router, tags=["Report Attachments"])

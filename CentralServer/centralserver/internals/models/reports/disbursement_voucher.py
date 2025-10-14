@@ -39,6 +39,12 @@ class DisbursementVoucher(SQLModel, table=True):
 
     modeOfPayment: str  # MDS Check, Commercial Check, ADA, Others
 
+    # Link to liquidation report
+    linkedLiquidationCategory: str | None = Field(
+        default=None,
+        description="The category of the liquidation report this voucher is linked to (e.g., 'operating_expenses', 'clinic_fund', etc.)",
+    )
+
     payee: str
     tinOrEmployeeNo: str | None = None
     responsibilityCenter: str | None = None

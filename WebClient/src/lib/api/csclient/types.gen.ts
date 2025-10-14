@@ -146,6 +146,16 @@ export type BodyRequestAccessTokenV1AuthLoginPost = {
 };
 
 /**
+ * Body_resend_user_invitation_v1_auth_resend_invite_post
+ */
+export type BodyResendUserInvitationV1AuthResendInvitePost = {
+    /**
+     * User Id
+     */
+    user_id: string;
+};
+
+/**
  * Body_update_user_avatar_endpoint_v1_users_avatar_patch
  */
 export type BodyUpdateUserAvatarEndpointV1UsersAvatarPatch = {
@@ -326,6 +336,235 @@ export type DailyFinancialReportEntry = {
      * Purchases
      */
     purchases: number;
+};
+
+/**
+ * DisbursementVoucherAccountingEntryData
+ * Data model for disbursement voucher accounting entries.
+ */
+export type DisbursementVoucherAccountingEntryData = {
+    /**
+     * Uacs Code
+     */
+    uacs_code: string;
+    /**
+     * Accounttitle
+     */
+    accountTitle: string;
+    /**
+     * Debit
+     */
+    debit: number;
+    /**
+     * Credit
+     */
+    credit: number;
+};
+
+/**
+ * DisbursementVoucherCreateRequest
+ * Request model for creating/updating disbursement vouchers.
+ */
+export type DisbursementVoucherCreateRequest = {
+    /**
+     * Schoolid
+     */
+    schoolId: number;
+    /**
+     * Date
+     */
+    date: string;
+    /**
+     * Modeofpayment
+     */
+    modeOfPayment: string;
+    /**
+     * Payee
+     */
+    payee: string;
+    /**
+     * Tinoremployeeno
+     */
+    tinOrEmployeeNo?: string | null;
+    /**
+     * Responsibilitycenter
+     */
+    responsibilityCenter?: string | null;
+    /**
+     * Orsbursno
+     */
+    orsbursNo?: string | null;
+    /**
+     * Address
+     */
+    address?: string | null;
+    /**
+     * Linkedliquidationcategory
+     */
+    linkedLiquidationCategory?: string | null;
+    /**
+     * Certifiedcashavailable
+     */
+    certifiedCashAvailable?: boolean;
+    /**
+     * Certifiedsupportingdocscomplete
+     */
+    certifiedSupportingDocsComplete?: boolean;
+    /**
+     * Certifiedsubjecttodebitaccount
+     */
+    certifiedSubjectToDebitAccount?: boolean;
+    /**
+     * Approvedby
+     */
+    approvedBy?: string | null;
+    /**
+     * Checkno
+     */
+    checkNo?: string | null;
+    /**
+     * Banknameandaccountno
+     */
+    bankNameAndAccountNo?: string | null;
+    /**
+     * Adano
+     */
+    adaNo?: string | null;
+    /**
+     * Jevno
+     */
+    jevNo?: string | null;
+    /**
+     * Entries
+     */
+    entries?: Array<DisbursementVoucherEntryData>;
+    /**
+     * Accountingentries
+     */
+    accountingEntries?: Array<DisbursementVoucherAccountingEntryData>;
+    /**
+     * Certifiedby
+     */
+    certifiedBy?: Array<string>;
+};
+
+/**
+ * DisbursementVoucherEntryData
+ * Data model for disbursement voucher entries.
+ */
+export type DisbursementVoucherEntryData = {
+    /**
+     * Receipt
+     */
+    receipt?: string | null;
+    /**
+     * Particulars
+     */
+    particulars: string;
+    /**
+     * Unit
+     */
+    unit: string;
+    /**
+     * Quantity
+     */
+    quantity: number;
+    /**
+     * Unitprice
+     */
+    unitPrice: number;
+};
+
+/**
+ * DisbursementVoucherResponse
+ * Response model for disbursement voucher data.
+ */
+export type DisbursementVoucherResponse = {
+    /**
+     * Parent
+     */
+    parent: string;
+    /**
+     * Date
+     */
+    date: string;
+    /**
+     * Schoolid
+     */
+    schoolId: number;
+    /**
+     * Modeofpayment
+     */
+    modeOfPayment: string;
+    /**
+     * Payee
+     */
+    payee: string;
+    /**
+     * Tinoremployeeno
+     */
+    tinOrEmployeeNo?: string | null;
+    /**
+     * Responsibilitycenter
+     */
+    responsibilityCenter?: string | null;
+    /**
+     * Orsbursno
+     */
+    orsbursNo?: string | null;
+    /**
+     * Address
+     */
+    address?: string | null;
+    /**
+     * Linkedliquidationcategory
+     */
+    linkedLiquidationCategory?: string | null;
+    reportStatus: ReportStatus;
+    /**
+     * Certifiedcashavailable
+     */
+    certifiedCashAvailable: boolean;
+    /**
+     * Certifiedsupportingdocscomplete
+     */
+    certifiedSupportingDocsComplete: boolean;
+    /**
+     * Certifiedsubjecttodebitaccount
+     */
+    certifiedSubjectToDebitAccount: boolean;
+    /**
+     * Approvedby
+     */
+    approvedBy?: string | null;
+    /**
+     * Checkno
+     */
+    checkNo?: string | null;
+    /**
+     * Banknameandaccountno
+     */
+    bankNameAndAccountNo?: string | null;
+    /**
+     * Adano
+     */
+    adaNo?: string | null;
+    /**
+     * Jevno
+     */
+    jevNo?: string | null;
+    /**
+     * Entries
+     */
+    entries?: Array<DisbursementVoucherEntryData>;
+    /**
+     * Accountingentries
+     */
+    accountingEntries?: Array<DisbursementVoucherAccountingEntryData>;
+    /**
+     * Certifiedby
+     */
+    certifiedBy?: Array<string>;
 };
 
 /**
@@ -2305,6 +2544,31 @@ export type InviteUserV1AuthInvitePostResponses = {
 };
 
 export type InviteUserV1AuthInvitePostResponse = InviteUserV1AuthInvitePostResponses[keyof InviteUserV1AuthInvitePostResponses];
+
+export type ResendUserInvitationV1AuthResendInvitePostData = {
+    body: BodyResendUserInvitationV1AuthResendInvitePost;
+    path?: never;
+    query?: never;
+    url: '/v1/auth/resend-invite';
+};
+
+export type ResendUserInvitationV1AuthResendInvitePostErrors = {
+    /**
+     * Validation Error
+     */
+    422: HttpValidationError;
+};
+
+export type ResendUserInvitationV1AuthResendInvitePostError = ResendUserInvitationV1AuthResendInvitePostErrors[keyof ResendUserInvitationV1AuthResendInvitePostErrors];
+
+export type ResendUserInvitationV1AuthResendInvitePostResponses = {
+    /**
+     * Successful Response
+     */
+    200: UserPublic;
+};
+
+export type ResendUserInvitationV1AuthResendInvitePostResponse = ResendUserInvitationV1AuthResendInvitePostResponses[keyof ResendUserInvitationV1AuthResendInvitePostResponses];
 
 export type GetAllRolesV1AuthRolesGetData = {
     body?: never;
@@ -4988,6 +5252,134 @@ export type GetLiquidationValidStatusTransitionsV1ReportsLiquidationSchoolIdYear
 };
 
 export type GetLiquidationValidStatusTransitionsV1ReportsLiquidationSchoolIdYearMonthCategoryValidTransitionsGetResponse = GetLiquidationValidStatusTransitionsV1ReportsLiquidationSchoolIdYearMonthCategoryValidTransitionsGetResponses[keyof GetLiquidationValidStatusTransitionsV1ReportsLiquidationSchoolIdYearMonthCategoryValidTransitionsGetResponses];
+
+export type GetDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDateGetData = {
+    body?: never;
+    path: {
+        /**
+         * School Id
+         */
+        school_id: number;
+        /**
+         * Year
+         */
+        year: number;
+        /**
+         * Month
+         */
+        month: number;
+        /**
+         * Date
+         */
+        date: number;
+    };
+    query?: never;
+    url: '/v1/reports/v1/reports/disbursement-voucher/{school_id}/{year}/{month}/{date}';
+};
+
+export type GetDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDateGetErrors = {
+    /**
+     * Validation Error
+     */
+    422: HttpValidationError;
+};
+
+export type GetDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDateGetError = GetDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDateGetErrors[keyof GetDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDateGetErrors];
+
+export type GetDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDateGetResponses = {
+    /**
+     * Successful Response
+     */
+    200: DisbursementVoucherResponse;
+};
+
+export type GetDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDateGetResponse = GetDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDateGetResponses[keyof GetDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDateGetResponses];
+
+export type CreateOrUpdateDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDatePostData = {
+    body: DisbursementVoucherCreateRequest;
+    path: {
+        /**
+         * School Id
+         */
+        school_id: number;
+        /**
+         * Year
+         */
+        year: number;
+        /**
+         * Month
+         */
+        month: number;
+        /**
+         * Date
+         */
+        date: number;
+    };
+    query?: never;
+    url: '/v1/reports/v1/reports/disbursement-voucher/{school_id}/{year}/{month}/{date}';
+};
+
+export type CreateOrUpdateDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDatePostErrors = {
+    /**
+     * Validation Error
+     */
+    422: HttpValidationError;
+};
+
+export type CreateOrUpdateDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDatePostError = CreateOrUpdateDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDatePostErrors[keyof CreateOrUpdateDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDatePostErrors];
+
+export type CreateOrUpdateDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDatePostResponses = {
+    /**
+     * Successful Response
+     */
+    200: DisbursementVoucherResponse;
+};
+
+export type CreateOrUpdateDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDatePostResponse = CreateOrUpdateDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDatePostResponses[keyof CreateOrUpdateDisbursementVoucherV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthDatePostResponses];
+
+export type GetDisbursementVouchersForMonthV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthGetData = {
+    body?: never;
+    path: {
+        /**
+         * School Id
+         */
+        school_id: number;
+        /**
+         * Year
+         */
+        year: number;
+        /**
+         * Month
+         */
+        month: number;
+    };
+    query?: {
+        /**
+         * Linked Category
+         */
+        linked_category?: string | null;
+    };
+    url: '/v1/reports/v1/reports/disbursement-voucher/{school_id}/{year}/{month}';
+};
+
+export type GetDisbursementVouchersForMonthV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthGetErrors = {
+    /**
+     * Validation Error
+     */
+    422: HttpValidationError;
+};
+
+export type GetDisbursementVouchersForMonthV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthGetError = GetDisbursementVouchersForMonthV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthGetErrors[keyof GetDisbursementVouchersForMonthV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthGetErrors];
+
+export type GetDisbursementVouchersForMonthV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthGetResponses = {
+    /**
+     * Response Get Disbursement Vouchers For Month V1 Reports V1 Reports Disbursement Voucher  School Id   Year   Month  Get
+     * Successful Response
+     */
+    200: Array<DisbursementVoucherResponse>;
+};
+
+export type GetDisbursementVouchersForMonthV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthGetResponse = GetDisbursementVouchersForMonthV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthGetResponses[keyof GetDisbursementVouchersForMonthV1ReportsV1ReportsDisbursementVoucherSchoolIdYearMonthGetResponses];
 
 export type UploadAttachmentEndpointV1ReportsAttachmentsUploadPostData = {
     body: BodyUploadAttachmentEndpointV1ReportsAttachmentsUploadPost;

@@ -371,7 +371,8 @@ export default function ReportsPage() {
                                     </Menu.Item>
                                     {canCreateReports && (
                                         <>
-                                            {(report.reportStatus === "draft" || report.reportStatus === "rejected") && (
+                                            {(report.reportStatus === "draft" ||
+                                                report.reportStatus === "rejected") && (
                                                 <Menu.Item
                                                     leftSection={<IconPencil size={14} />}
                                                     onClick={() => handleOpenEditModal(report)}
@@ -379,7 +380,9 @@ export default function ReportsPage() {
                                                     Edit
                                                 </Menu.Item>
                                             )}
-                                            {(report.reportStatus === "draft" || report.reportStatus === "review" || report.reportStatus === "rejected") && (
+                                            {(report.reportStatus === "draft" ||
+                                                report.reportStatus === "review" ||
+                                                report.reportStatus === "rejected") && (
                                                 <>
                                                     <Menu.Divider />
                                                     <Menu.Item
