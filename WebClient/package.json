@@ -30,7 +30,7 @@
         "@tabler/icons-react": "^3.34.1",
         "@tiptap/extension-link": "^3.10.5",
         "@tiptap/pm": "^3.10.5",
-        "@tiptap/react": "^3.10.5",
+        "@tiptap/react": "^3.10.7",
         "@tiptap/starter-kit": "^3.10.5",
         "dayjs": "^1.11.19",
         "embla-carousel": "^8.6.0",
