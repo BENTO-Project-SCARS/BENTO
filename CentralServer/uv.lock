@@ -657,16 +657,16 @@ wheels = [
 
 [[package]]
 name = "llm-gemini"
-version = "0.26.1"
+version = "0.28.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "httpx" },
     { name = "ijson" },
     { name = "llm" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c5/c6/fd756178b3fa5565d4cd375ccdf8e35c6d8d3647139b998fb8e16545d0a3/llm_gemini-0.26.1.tar.gz", hash = "sha256:8f78ba7beca84216ab9168b0faf7692f5a45db9d2a92429af93e4cf11d1a0f4e", size = 18481, upload-time = "2025-10-11T05:37:53.252Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/49/2d/3ffbe9c8447678b56f6b43272062f99abce0a38d2891cb2aa14bb03633a4/llm_gemini-0.28.2.tar.gz", hash = "sha256:045a6262b16c27469da5424423f8e0b20906b99ddba58504fa5c2c0fbb2b9f88", size = 23241, upload-time = "2025-12-23T16:21:29.342Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/7f/54/ea7407f29231df37bd7795068ca37a9714904542e1477869375d21c91df2/llm_gemini-0.26.1-py3-none-any.whl", hash = "sha256:e1d6b06045f72150fdb544444a1685a2139eef5a31f899f7d415b2fb66a9c94d", size = 15712, upload-time = "2025-10-11T05:37:52.139Z" },
+    { url = "https://files.pythonhosted.org/packages/03/06/30ccc6514d3b628c0875a065505d4fa4b9abdd3f46500080ba42a2762af1/llm_gemini-0.28.2-py3-none-any.whl", hash = "sha256:3efef8b896b345b6107d0056ea24d6f9e59a57cc36ade868d567ab578fc1ede0", size = 17729, upload-time = "2025-12-23T16:21:28.173Z" },
 ]
 
 [[package]]
