@@ -1,0 +1,14 @@
+Copyright (c) 2024-2026 Adolfo, Tenchie; Inovero, Matt Andrew; Ramos, Arabela; Tayao, Christopher Andrei. All Rights Reserved.
+
+This source code is made publicly visible strictly for educational review, portfolio display, and inspection purposes.
+
+No license, grant, or right is provided to compile, execute, modify, sublicense, distribute, reproduce, or create derivative
+works from, or otherwise use this software, in whole or in part, for either commercial or non-commercial purposes, without
+the prior written permission of the copyright holders.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+For permission inquiries, contact: chris.tayao@chrisfromnowhere.me
